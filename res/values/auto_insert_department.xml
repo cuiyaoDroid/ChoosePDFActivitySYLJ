@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- id name father -->
+    <string-array name="department_item">
+        <item>1 运输处 0</item>
+    </string-array>
+</resources>

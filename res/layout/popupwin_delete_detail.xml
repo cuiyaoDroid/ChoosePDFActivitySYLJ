@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ android:background="@drawable/info_bubble" 
+ android:layout_width="wrap_content" 
+ android:layout_height="wrap_content"
+ android:paddingLeft="5px"
+ android:paddingTop="5px"
+ android:paddingRight="5px"  
+   >
+    <TextView android:id="@+id/map_bubbleTitle" 
+       android:ellipsize="marquee" 
+       android:layout_width="wrap_content" 
+       android:layout_height="wrap_content"
+       android:layout_centerInParent="true"
+       android:textColor="@android:color/black"
+       android:visibility="gone"
+       android:text=""
+       android:singleLine="true"   />
+
+    <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/clickable_text_backgroud"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="@string/delete" />
+    
+</RelativeLayout>

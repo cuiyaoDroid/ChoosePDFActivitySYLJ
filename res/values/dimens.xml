@@ -1,0 +1,33 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">2dp</dimen>
+    <dimen name="behind_width">200dp</dimen>
+    <dimen name="addition_bottom_width">40dp</dimen>
+
+    <integer name="num_cols">1</integer>
+
+    <dimen name="YST_W_EBIG">30sp</dimen>
+    <dimen name="YST_W_MBIG">24sp</dimen>
+    <dimen name="YST_W_BIG">18sp</dimen>
+    <dimen name="YST_W_EMIDDLE">16sp</dimen>
+    <dimen name="YST_W_MIDDLE">13sp</dimen>
+    <dimen name="YST_W_SMIDDLE">14sp</dimen>
+    <dimen name="YST_W_COMMON">12sp</dimen>
+    <dimen name="YST_W_SMALL">10sp</dimen>
+    <dimen name="font_16">16sp</dimen>
+    <dimen name="font_9">9sp</dimen>
+    <dimen name="font_20">20sp</dimen>
+    <dimen name="font_15">15sp</dimen>
+    <dimen name="font_14">14sp</dimen>
+    <dimen name="font_11">11sp</dimen>
+    
+    <dimen name="updatebar_height">62.0dip</dimen>
+    <dimen name="updatebar_content_height">60.0dip</dimen>
+    <dimen name="updatebar_padding">10.0dip</dimen>
+
+</resources>

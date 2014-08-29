@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/radiu_list_bg"
+        android:layout_toLeftOf="@+id/cell_browse_btn" >
+
+        <EditText
+            android:id="@+id/attchment_edit"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:background="@null"
+            android:ems="10"
+            android:layout_weight="1"
+            android:paddingLeft="10dp"
+            android:editable="false"
+            android:textSize="12sp" >
+        </EditText>
+
+        <ImageButton
+            android:id="@+id/cell_delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:background="@drawable/button"
+            android:padding="5dp"
+            android:src="@drawable/btn_delete" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/cell_browse_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/button"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/btn_browse" />
+
+</RelativeLayout>

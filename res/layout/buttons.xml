@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ViewAnimator
+        android:id="@+id/switcher"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_below="@+id/title"
+        android:background="#F3F3F3" >
+		 
+        <RelativeLayout
+            android:id="@+id/topBar0Main"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="6dp" >
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/topBar1Search"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+
+            <EditText
+                android:id="@+id/searchText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/searchBack"
+                android:background="@drawable/search"
+                android:hint="@string/search"
+                android:inputType="text"
+                android:singleLine="true" />
+
+            <ImageButton
+                android:id="@+id/searchBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/searchForward"
+                android:background="@drawable/button"
+                android:contentDescription="@string/search_backwards"
+                android:src="@drawable/ic_arrow_left" />
+
+            <ImageButton
+                android:id="@+id/searchForward"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button"
+                android:contentDescription="@string/search_forwards"
+                android:src="@drawable/ic_arrow_right" />
+        </RelativeLayout>
+ 		
+        <LinearLayout
+            android:id="@+id/topBar2Annot"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="3dp"
+            android:orientation="horizontal"
+            android:weightSum="6" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:onClick="OnHighlightButtonClick"
+                android:background="@drawable/button"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/highlightButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button"
+                    android:contentDescription="@string/highlight"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_highlight" />
+
+                <TextView
+                    android:id="@+id/highlighttext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="高亮"
+                    android:textColor="#525F69"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:onClick="OnUnderlineButtonClick"
+                android:background="@drawable/button"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/underlineButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:background="@drawable/button"
+                    android:contentDescription="@string/underline"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_underline" />
+
+                <TextView
+                    android:id="@+id/underlinetext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="下划线"
+                    android:textColor="#525F69"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:contentDescription="@string/strike_out"
+                android:onClick="OnStrikeOutButtonClick"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/strikeOutButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button"
+                    android:contentDescription="@string/strike_out"
+                    android:scaleType="centerInside"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:src="@drawable/btn_throughline" />
+
+                <TextView
+                    android:id="@+id/strikeOuttext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="删除线"
+                    android:textColor="#525F69"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@drawable/button"
+                android:onClick="OnInkButtonClick"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/inkButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:background="@drawable/button"
+                    android:contentDescription="@string/aink"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_postil" />
+
+                <TextView
+                    android:id="@+id/inktext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="批注"
+                    android:textColor="#525F69"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:onClick="OnCopyTextButtonClick"
+                android:background="@drawable/button"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/copyTextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:background="@drawable/button"
+                    android:contentDescription="@string/copy"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_copy" />
+
+                <TextView
+                    android:id="@+id/copyTexttext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="复制"
+                    android:textColor="#525F69"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:onClick="OnStampButtonClick"
+                android:background="@drawable/button"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/stampButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:background="@drawable/button"
+                    android:contentDescription="@string/stamp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_sign" />
+
+                <TextView
+                    android:id="@+id/stamptext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="签名"
+                    android:textColor="#525F69"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/topBar3Delete"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageButton
+                android:id="@+id/cancelDeleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button"
+                android:contentDescription="@string/cancel"
+                android:onClick="OnCancelDeleteButtonClick"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/delete" />
+
+            <TextView
+                android:id="@+id/deleteLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/deleteButton"
+                android:layout_toRightOf="@+id/cancelDeleteButton"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/delete"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#525F69"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/deleteButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button"
+                android:contentDescription="@string/delete"
+                android:onClick="OnDeleteButtonClick"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/success" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/topBar4More"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="6dp" >
+
+            <ImageButton
+                android:id="@+id/printButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button"
+                android:contentDescription="@string/print"
+                android:onClick="OnPrintButtonClick"
+                android:src="@drawable/ic_print"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button"
+                android:contentDescription="@string/search_document"
+                android:src="@drawable/ic_magnifying_glass"
+                android:visibility="gone" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:orientation="vertical" >
+
+                <ImageButton
+                    android:id="@+id/copyTextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dip"
+                    android:layout_weight="1"
+                    android:background="@drawable/button"
+                    android:contentDescription="@string/copy_text_to_the_clipboard"
+                    android:onClick="OnCopyTextButtonClick"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/btn_copy" />
+
+                <TextView
+                    android:id="@+id/copyTexttext"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="复制"
+                    android:textColor="#525F69"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/topBar5Accept"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageButton
+                android:id="@+id/cancelAcceptButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button"
+                android:contentDescription="@string/cancel"
+                android:onClick="OnCancelAcceptButtonClick"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/delete" />
+
+            <TextView
+                android:id="@+id/annotType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/acceptButton"
+                android:layout_toRightOf="@+id/cancelAcceptButton"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="#525F69"
+                android:textStyle="bold" />
+
+            <ImageButton
+                android:id="@+id/acceptButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/button"
+                android:contentDescription="@string/accept"
+                android:onClick="OnAcceptButtonClick"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/success" />
+        </RelativeLayout>
+    </ViewAnimator>
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="42dp"
+        android:background="@drawable/bt_top"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <ImageButton
+            android:id="@+id/goback_btn"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:adjustViewBounds="true"
+            android:background="@drawable/button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/btn_back" />
+
+
+        <RadioGroup
+            android:id="@+id/toptool_radiogroup"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginTop="6dp"
+            android:layout_toLeftOf="@+id/saveButton"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/editAnnotButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="@null"
+                android:button="@null"
+                android:contentDescription="@string/edit_annotations"
+                android:drawableLeft="@drawable/btn_top_edit_bg"
+                android:padding="6dp" />
+        </RadioGroup>
+
+        <ImageButton
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@null"
+            android:contentDescription="@string/toggle_reflow_mode"
+            android:onClick="OnSaveASButtonClick"
+            android:padding="6dp"
+            android:src="@drawable/btn_top_save_bg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/pdfrelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_layout" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_below="@+id/switcher"
+        android:background="@drawable/bg_title" >
+
+        <TextView
+            android:id="@+id/docNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:textColor="#525F69"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/outlineButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button"
+            android:contentDescription="@string/outline_title"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_info" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/lowerButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/title_layout"
+        android:layout_centerHorizontal="true" >
+
+        <SeekBar
+            android:id="@+id/pageSlider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="0dp"
+            android:background="@color/toolbar"
+            android:paddingBottom="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="12dp"
+            android:progressDrawable="@drawable/seek_progress"
+            android:thumb="@drawable/seek_thumb"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/pageNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/page_num"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/pageSlider"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/page_num"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+</RelativeLayout>

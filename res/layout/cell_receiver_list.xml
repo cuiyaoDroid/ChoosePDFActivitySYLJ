@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="30dp"
+    android:orientation="vertical"
+    >
+
+    <EditText
+        android:id="@+id/receiver_edit"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@null"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/cell_delete_btn"
+        android:textSize="12sp"
+        android:paddingLeft="10dp"
+        android:editable="false"
+        android:ems="10" >
+    </EditText>
+	<ImageButton
+        android:id="@+id/cell_delete_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/button"
+        android:padding="5dp"
+        android:src="@drawable/btn_delete" />
+</RelativeLayout>

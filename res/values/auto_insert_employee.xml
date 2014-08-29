@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="employer_item">
+        <!-- name address father -->
+        <item>于喜强 ys_yxq@sy.mor.cr 1</item>
+        <item>杨暄 ys_yx@sy.mor.cr 1</item>
+        <item>刘净霄 ys_ljx@sy.mor.cr 1</item>
+        <item>张伟 ys_zwb@sy.mor.cr 1</item>
+        <item>程铁岩 dd_cty@sy.mor.cr 1</item>
+        <item>李卫华 ys_lwh@sy.mor.cr 1</item>
+        <item>安全信息科 ys_aqk@sy.mor.cr 1</item>
+        <item>安全信息科科长 ys_aqkz@sy.mor.cr 1</item>
+        <item>安全信息科副科长 ys_aqfkz@sy.mor.cr 1</item>
+        <item>技术设备科 ys_jsk@sy.mor.cr 1</item>
+        <item>技术设备科科长 js_jskz@sy.mor.cr 1</item>
+        <item>技术设备科副科长（编组计划） ys_jssg@sy.mor.cr 1</item>
+        <item>技术设备科副科长（运行图） ys_jsyx@sy.mor.cr 1</item>
+        <item>技术设备科编组计划 ys_jsbz@sy.mor.cr 1</item>
+        <item>技术设备科运行图 js_jssb@sy.mor.cr 1</item>
+        <item>技术设备科设备 ys_sgb@sy.mor.cr 1</item>
+        <item>车站管理科 ys_czk@sy.mor.cr 1</item>
+        <item>车站科长 ys_czkz@sy.mor.cr 1</item>
+        <item>车站科大站管理 ys_czdzgl@sy.mor.cr 1</item>
+        <item>车站科规章管理 ys_czgzgl@sy.mor.cr 1</item>
+        <item>车站科中间站管理 ys_czzjzgl@sy.mor.cr 1</item>
+        <item>车站科施工管理 ys_czsggl@sy.mor.cr 1</item>
+        <item>车站科站细管理 ys_czzxgl@sy.mor.cr 1</item>
+        <item>车站科调车管理 ys_czdcgl@sy.mor.cr 1</item>
+        <item>车站科教育管理 ys_czjygl@sy.mor.cr 1</item>
+        <item>车站科设备管理 ys_czsbgl@sy.mor.cr 1</item>
+        <item>车站管理科副科长（规章） ys_czgzfkz@sy.mor.cr 1</item>
+        <item>车站管理科副科长（中间站） ys_czrcgl@sy.mor.cr 1</item>
+        <item>施工计划科 ys_hjk@sy.mor.cr 1</item>
+        <item>施工计划科科长 ys_hjkz@sy.mor.cr 1</item>
+        <item>施工计划科副科长 ys_hjhyjh@sy.mor.cr 1</item>
+        <item>施工计划科施工计划 ys_hjjsjh@sy.mor.cr 1</item>
+        <item>高铁管理科 ys_gtk@sy.mor.cr 1</item>
+        <item>高铁管理科科长 ys_gtkz@sy.mor.cr 1</item>
+        <item>高铁管理科（规章） ys_gtgz@sy.mor.cr 1</item>
+        <item>综合科 ys_fxk@sy.mor.cr 1</item>
+        <item>综合科科长 ys_fxkz@sy.mor.cr 1</item>
+        <item>沈局车务设备维修所 ysc_wxs@sy.mor.cr 1</item>
+        <item>沈局车务设备维修所主任 ysc_wxszr@sy.mor.cr 1</item>
+        <item>沈局车务设备维修所维修 ysc_wxswx@sy.mor.cr 1</item>
+        <item>沈局车务设备维修所所培训 ysc_wxspx@sy.mor.cr 1</item>
+        <item>沈局车务设备维修所网络 ysc_wxswl@sy.mor.cr 1</item>
+        <item>设备维修所维修点 ysc_wxswxd@sy.mor.cr 1</item>
+        <item>测试1 ys_test1@sy.mor.cr 1</item>
+        <item>测试2 ys_test2@sy.mor.cr 1</item>
+    </string-array>
+
+</resources>

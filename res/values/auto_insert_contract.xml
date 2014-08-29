@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- id name-->
+    <string-array name="province_item">
+        <item>0 沈局 </item>
+    </string-array>
+    
+</resources>
